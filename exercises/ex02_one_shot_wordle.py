@@ -3,14 +3,18 @@ __author__ = "730607229"
 
 secret: str = "python"
 secret_length: int = len(secret)
-guess: str = input(f"What is your {secret_length}-letter guess? ")
+guess: str = ""
+
+if len(guess) == 0:
+    guess = input(f"What is your {secret_length}-letter guess? ")
 
 while len(guess) != len(secret):
     if secret_length == 1:
-        guess: str = input(f"That was not {secret_length} letter! Try again: ")
+        guess = input(f"That was not {secret_length} letter! Try again: ")
     if secret_length > 1:
-        guess: str = input(f"That was not {secret_length} letters! Try again: ")
+        guess = input(f"That was not {secret_length} letters! Try again: ")
         # plural form when secret length > 1
+        # To avoid name "guess" already defined on line 6, set guess as an empty string. Although it seems a little bit weird, it works.
 
 white_box: str = "\U00002B1C"
 green_box: str = "\U0001F7E9"
