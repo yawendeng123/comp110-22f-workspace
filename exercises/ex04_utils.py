@@ -6,7 +6,9 @@ def all(a_list: list[int], single_int: int) -> bool:
     """Given a list of ints and an int, return a bool indicating whether or not all the ints in the list are the same as the given int."""
     idx: int = 0
     # idx is short for loop indexing variables.
-    while len(a_list) == 0 or idx < len(a_list):
+    if len(a_list) == 0:
+        return False
+    while idx < len(a_list):
         if a_list[idx] != single_int:
             return False
         else:
@@ -38,4 +40,5 @@ def is_equal(list_a: list[int], list_b: list[int]) -> bool:
         else:
             idx += 1
     return True
+
 
