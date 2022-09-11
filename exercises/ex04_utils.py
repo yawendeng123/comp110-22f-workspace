@@ -40,5 +40,3 @@ def is_equal(list_a: list[int], list_b: list[int]) -> bool:
         else:
             idx += 1
     return True
-
-
