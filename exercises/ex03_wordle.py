@@ -1,6 +1,7 @@
 """EX03 - Structured Wordle."""
 __author__ = "730607229"
 
+
 def contains_char(word: str, single_char: str) -> bool:
     """Given a word and a single character, verifying if the word in the first string contains the single character of the second string."""
     assert len(single_char) == 1
@@ -13,9 +14,11 @@ def contains_char(word: str, single_char: str) -> bool:
             idx += 1
     return False
 
+
 white_box: str = "\U00002B1C"
 green_box: str = "\U0001F7E9"
 yellow_box: str = "\U0001F7E8"
+
 
 def emojified(guess: str, secret: str) -> str:
     """Given a guess and a secret, verify whether the characters in the guess match the characters and positions in the secret, and return a string of colored emoji."""
@@ -37,6 +40,7 @@ def emojified(guess: str, secret: str) -> str:
     return emoji_storage
     # Remember to quit() or kill the terminal after making changes and then save and re-run.
 
+
 def input_guess(expected_len: int) -> str:
     """Prompt the user for a guess and continue prompting them until they provide a guess of the expected length."""
     guess: str = ""
@@ -45,6 +49,7 @@ def input_guess(expected_len: int) -> str:
     while len(guess) != expected_len:
         guess = input(f"That wasn't {expected_len} chars! Try again: ")
     return guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -60,6 +65,7 @@ def main() -> None:
         else:
             turn += 1
     print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
