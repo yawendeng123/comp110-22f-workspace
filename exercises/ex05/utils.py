@@ -5,7 +5,7 @@ __author__ = "730607229"
 def only_evens(xs: list[int]) -> list[int]:
     """Given a list of ints, return a new list containing only the elements of the input list that were even."""
     # The only_evens function must not modify the list it is given a reference to as a parameter.
-    # xs stands for a list.
+    # xs stands for a list
     i: int = 0
     # i is short for loop indexing variables.
     a_list: list[int] = []
@@ -25,7 +25,7 @@ def concat(list_a: list[int], list_b: list[int]) -> list[int]:
     while i < len(list_a):
         new_list.append(list_a[i])
         i += 1
-    i: int = 0
+    i = 0
     while i < len(list_b):
         new_list.append(list_b[i])
         i += 1
@@ -39,12 +39,12 @@ def sub(xs: list[int], start: int, end: int) -> list[int]:
     # If the length of the list is 0, start is greater than the length of the list, or end is at most 0, return the empty list.
     if len(xs) == 0 or start > len(xs) or end <= 0:
         return new_list
-    i: int = start
-    alt_i: int = end
+    i = start
+    alt_i = end
     if start < 0:
-        i: int = 0
+        i = 0
     if end > len(xs):
-        alt_i: int = len(xs)
+        alt_i = len(xs)
     while i < alt_i:
         new_list.append(xs[i])
         i += 1
