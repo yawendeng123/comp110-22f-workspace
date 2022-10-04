@@ -174,7 +174,7 @@ def intro_scene(point: int) -> int:
         if choice == "1":
             print("With a creak, you push open the gate door...")
             answer = True
-            return point
+            # return point
         
         elif choice == "2":
             print("You were wise to choose to acknowledge your surroundings before entering the gate.")
@@ -190,10 +190,11 @@ def intro_scene(point: int) -> int:
             print("This wall is like a never-ending and very high, normal humans are unable to directly over this wall.")
             print("The surrounding vegetation is getting thicker and thicker, and you can no longer move forward, so you return to the gate and open it...")
             answer = True
-            return point
+            # return point
 
         else:
             choice = input("\nPlease enter a valid option (1/2): ")
+    return point
 
 
 scene_1_achivement_a: int = 0
@@ -224,7 +225,7 @@ def scene_1(point: int) -> int:
                 scene_1_achivement_a += 1
                 point += 10
             answer = True
-            return point
+            # return point
         
         elif choice == "2":
             print("You feel very uneasy, and after weighing the pros and cons again and again, you run away as fast as you can.")
@@ -236,10 +237,11 @@ def scene_1(point: int) -> int:
             end = True
             ending_1()
             answer = True
-            return point
+            # return point
 
         else:
             choice = input("\nPlease enter a valid option (1/2): ")
+    return point
 
 
 scene_2_achivement_a: int = 0
@@ -280,7 +282,7 @@ def scene_2(point: int) -> int:
                     point += 10
                 print("When the monster is far away, you quickly slip inside the mansion.")
                 answer = True
-                return point
+                # return point
 
             else:
                 print("Unfortunately, you've been found out!!!")
@@ -288,7 +290,7 @@ def scene_2(point: int) -> int:
                 end = True
                 ending_2()
                 answer = True
-                return point
+                # return point
             
         elif choice == "2":
             print("You feel panic and try to escape through the door behind you.")
@@ -297,7 +299,7 @@ def scene_2(point: int) -> int:
             end = True
             ending_2()
             answer = True
-            return point
+            # return point
 
         elif choice == "3":
             print("You quickly slip inside the mansion without sound.")
@@ -308,7 +310,7 @@ def scene_2(point: int) -> int:
                 point += 10
             print("Hiding in the door inside the mansion, you glance at the source of the sound, and find it is a huge, twisted, horrible monster!!!")
             answer = True
-            return point
+            # return point
 
         elif choice == "4":
             print("You walk curiously towards the source of the sound.")
@@ -322,10 +324,11 @@ def scene_2(point: int) -> int:
             end = True
             ending_2()
             answer = True
-            return point
+            # return point
         
         else:
             choice = input("\nPlease enter a valid option (1/2/3/4): ")
+    return point
 
 
 scene_3_achivement_a: int = 0
