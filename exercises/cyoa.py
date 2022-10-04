@@ -42,7 +42,6 @@ def author_notes() -> None:
     global points
     global read_count_instruction
     global read_count_notes
-    
     print("This is a simple, text-driven adventure game that involves some slightly horror elements. Players proceed to the next step by typing in the characters required by the game, where making choices or reaching achievements increases the number of adventure points.")
     print("Achievements include making a specific choice, or observation, or collecting specific items.")
     print("Different endings are unlocked by the player's choices.") 
@@ -81,6 +80,7 @@ def author_notes() -> None:
 
 
 def collections_menu() -> None:
+    """Menu of collections."""
     print("[1] View Your Adventure Points")
     print("[2] View Your Achievements") 
     # print("[3] View Your Memory")
@@ -105,7 +105,6 @@ def collections() -> None:
         elif choice == "3":
             # print("\nHere's the items in your memory.")
             # print(memory)
-
             # elif choice == "4":
             print("Here's your endings.")
             print(endings)
@@ -204,6 +203,9 @@ scene_1_achivement_b: int = 0
 def scene_1(point: int) -> int:
     """The first scence."""
     global achievements
+    global scene_1_achivement_a
+    global scene_1_achivement_b
+    global end
     print("You open the door. A cold breeze blows on your face. There is a dark corridor in front of you, but you can see a bright light at the end.")
     print("You feel excitement and an inexplicable sense of unease at the same time.")
     print("You decide to:")
@@ -216,7 +218,6 @@ def scene_1(point: int) -> int:
         if choice == "1":
             print("You think, there's nothing to be afraid of, and start walking forward.")
             print("You can't see the path under your feet, you walk a little bumpy, and after a while, you successfully reach the inner side of the huge fence wall.")
-            global scene_1_achivement_a
             if scene_1_achivement_a == 0:
                 print(f"You reach an achivement {THUMBS_UP}")
                 achievements.append("grit")
@@ -227,8 +228,6 @@ def scene_1(point: int) -> int:
         
         elif choice == "2":
             print("You feel very uneasy, and after weighing the pros and cons again and again, you run away as fast as you can.")
-            global scene_1_achivement_b
-            global end
             if scene_1_achivement_b == 0:
                 print(f"You reach an achivement {THUMBS_UP}")
                 achievements.append("Running away is also a courage.")
@@ -270,7 +269,6 @@ def scene_2(point: int) -> int:
     while answer is False:
         if choice == "1":
             print("You calm down and don't move a muscle, hoping that the source of the strange sound doesn't find you.")
-            rolls: int = 0
             rolls = randint(1, 3)
             if rolls == 1:
                 print("Fortunately, the source of the sound does not find you.")
@@ -304,10 +302,10 @@ def scene_2(point: int) -> int:
         elif choice == "3":
             print("You quickly slip inside the mansion without sound.")
             if scene_2_achivement_b == 0:
-                    print(f"You reach an achivement {THUMBS_UP}")
-                    achievements.append("decisive!")
-                    scene_2_achivement_b += 1
-                    point += 10
+                print(f"You reach an achivement {THUMBS_UP}")
+                achievements.append("decisive!")
+                scene_2_achivement_b += 1
+                point += 10
             print("Hiding in the door inside the mansion, you glance at the source of the sound, and find it is a huge, twisted, horrible monster!!!")
             answer = True
             return point
@@ -317,10 +315,10 @@ def scene_2(point: int) -> int:
             print("The source of the sound was found to be a huge, twisted, horrible monster!!!")
             print("The giant twisted monster rushes over to you. You pass out.")
             if scene_2_achivement_c == 0:
-                    print(f"You reach an achivement {THUMBS_UP}")
-                    achievements.append("Curiosity killed you.")
-                    scene_2_achivement_c += 1
-                    point += 10
+                print(f"You reach an achivement {THUMBS_UP}")
+                achievements.append("Curiosity killed you.")
+                scene_2_achivement_c += 1
+                point += 10
             end = True
             ending_2()
             answer = True
@@ -333,7 +331,7 @@ def scene_2(point: int) -> int:
 scene_3_achivement_a: int = 0
 
 
-def scene_3(point:int) -> int:
+def scene_3(point: int) -> int:
     """The third scene."""
     global achievements
     global end
@@ -366,6 +364,7 @@ def adventure(point: int) -> int:
 
 
 def menu() -> None:
+    """Main Menu."""
     print("=== Menu ===")
     print("[1] New Adventure")
     print("[2] View Your Collections") 
