@@ -2,9 +2,6 @@
 __author__ = "730607229"
 
 
-from turtle import color
-
-
 def invert(initial: dict[str, str]) -> dict[str, str]:
     """Given a dictionary of [str, str], invert should return a dict[str, str] that inverts the keys and the values. The keys of the input list becomes the values of the output list and vice versa."""
     result: dict[str, str] = {}
