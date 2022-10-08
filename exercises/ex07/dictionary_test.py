@@ -81,17 +81,17 @@ def test_favorite_color_one_item() -> None:
 
 def test_favorite_color_multiple_item_same_color() -> None:
     """Test function favorite_color with multiple people love the same color in dictionary."""
-    dictionary: dict[str, str] = {"Karmen": "blue", "Coco": "blue", "Kris": "blue"}
+    dictionary: dict[str, str] = {"Karmen": "blue", "Coco": "blue", "Olivia": "blue"}
     assert favorite_color(dictionary) == "blue"
 
 
 def test_favorite_color_multiple_item_multiple_color() -> None:
     """Test function favorite_color with mutiple people love different colors in dictionary."""
-    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Hua": "white", "Coco": "blue", "Kris": "blue"}
+    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Hua": "white", "Coco": "blue", "Olivia": "blue"}
     assert favorite_color(dictionary) == "blue"
 
 
 def test_favorite_color_tie_colors() -> None:
     """Test function favorite_color with a tie for most popular color in dictionary."""
-    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Lydia": "pink", "Hua": "white", "Coco": "blue"}
+    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Lydia": "pink", "Hua": "white", "Coco": "blue", "Olivia": "blue"}
     assert favorite_color(dictionary) == "blue"
