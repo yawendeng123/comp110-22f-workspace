@@ -93,5 +93,5 @@ def test_favorite_color_multiple_item_multiple_color() -> None:
 
 def test_favorite_color_tie_colors() -> None:
     """Test function favorite_color with a tie for most popular color in dictionary."""
-    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Lydia": "pink", "Hua": "white", "Coco": "blue", "Olivia": "blue"}
+    dictionary: dict[str, str] = {"Karmen": "blue", "Evelina": "pink", "Lydia": "pink", "Hua": "white", "Coco": "blue"}
     assert favorite_color(dictionary) == "blue"
